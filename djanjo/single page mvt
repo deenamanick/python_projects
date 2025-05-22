@@ -1,10 +1,10 @@
 🔐 Django Single Page Login App
 
--A minimalist Django web application that loads a single login page at the root URL (`/`).
+- A minimalist Django web application that loads a single login page at the root URL (`/`).
 
--Useful as a boilerplate for beginners learning Django's structure and routing.
+- Useful as a boilerplate for beginners learning Django's structure and routing.
 
--Perfect for beginners learning Django’s **MVT (Model-View-Template)** architecture or for setting up a base login UI to extend with authentication.
+- Perfect for beginners learning Django’s **MVT (Model-View-Template)** architecture or for setting up a base login UI to extend with authentication.
 
 
 🚀Features
@@ -160,9 +160,9 @@ You should see your login page!
 
 
 📌 Notes
-No login logic (like authentication) is implemented — just a static form.
+- No login logic (like authentication) is implemented — just a static form.
 
-Extend it by integrating Django's built-in User model and authentication views.
+- Extend it by integrating Django's built-in User model and authentication views.
 
 
 Author
