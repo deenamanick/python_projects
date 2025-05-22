@@ -149,34 +149,34 @@ for more referance on how to install python refer this web, https://www.digitalo
 
 **✅1.Install django and create a folder**
 
-First, create a project folder,
+**First, create a project folder,**
 ```
 mkdir jeevi_academy
 cd jeevi_academy
 ```
 
-Then create a virtual environment (this keeps your project files clean):
+**Then create a virtual environment**(this keeps your project files clean):
 ```
 python -m venv venv
 ```
 
-Activate the virtual environment:
+**Activate the virtual environment:**
 
-Windows:
+**Windows:**
 
-In bash,
+- In bash,
 ```
 venv\Scripts\activate
 ```
-Mac/Linux:
+**Mac/Linux:**
 
-In bash,
+- In bash,
 ```
 source venv/bin/activate
 ```
-Then install Django:
+**Then install Django:**
 
-In bash
+- In bash
 ```
 pip install django
 ```
@@ -184,36 +184,39 @@ pip install django
 **✅ 2. Start Your Django Project**
 
 
-Create the base project (called config):
+**Create the base project**(called config):
 
-In bash
+- In bash
+  
 ```
 django-admin startproject config .
 ```
 
 The dot (.) at the end puts files in the current folder.
 
-You’ll now see files like:
+**You’ll now see files like:**
 
-manage.py – the main controller for your app
+- manage.py – the main controller for your app
 
-config/ – where settings are stored
+- config/ – where settings are stored
 
 **✅ 3. Start Django Apps**
+
 Apps are like “modules” or “sections” of your website.
 
-For Jeevi Academy, create three apps:
+**For Jeevi Academy, create three apps:**
 
-In bash
+- In bash
 ```
 python manage.py startapp users     # For login/register
 python manage.py startapp courses   # For course content
 python manage.py startapp quizzes   # For quizzes
 ```
 **✅ 4. Tell Django to Use Your Apps**
+
 In config/settings.py, find the INSTALLED_APPS section and add your apps:
 
-In python
+- In python
 ```
 INSTALLED_APPS = [
     'users',
@@ -230,7 +233,7 @@ INSTALLED_APPS = [
 **✅ 5. Run the Server**
 This will start your web app locally:
 
-In bash
+- In bash
 ```
 python manage.py runserver
 ```
@@ -239,9 +242,9 @@ Now visit http://127.0.0.1:8000 in your browser — you’ll see Django’s welc
 **✅ Step 6: Use a Custom User Model**
 Django has a built-in user system, but we’ll customize it to add a “role.”
 
-🔧 In users/models.py, paste this code:
+ In users/models.py, paste this code:
 
-python
+- python
 ```
 from django.contrib.auth.models import AbstractUser
 from django.db import models
@@ -265,7 +268,7 @@ Adds a role field (Student or Teacher).
 **✅ Step 7: Tell Django to Use This Model**
 In config/settings.py, add:
 
-python
+- python
 ```
 AUTH_USER_MODEL = 'users.User'
 ```
@@ -273,7 +276,7 @@ AUTH_USER_MODEL = 'users.User'
 📁 Create a file: users/forms.py
 Add this:
 
-python
+- python
 ```
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
@@ -288,7 +291,7 @@ class CustomUserCreationForm(UserCreationForm):
 
 In users/views.py, add:
 
-python
+- python
 ```
 from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm
@@ -308,7 +311,7 @@ def register(request):
 **✅ Step 10: Add URLs**
 📁 Create a file: users/urls.py
 
-python
+- python
 ```
 from django.urls import path
 from . import views
@@ -318,9 +321,8 @@ urlpatterns = [
 ]
 In config/urls.py:
 
-python
-Copy
-Edit
+- python
+
 from django.urls import path, include
 
 urlpatterns = [
@@ -330,7 +332,7 @@ urlpatterns = [
 **✅ Step 11: Create the HTML Template**
 📁 Create: templates/users/register.html
 
-html
+- html
 ```
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
@@ -347,19 +349,19 @@ html
 **✅ Step 12: Make Migrations**
 In the terminal, run:
 
-bash
+- bash
 ```
 python manage.py makemigrations
 python manage.py migrate
 ```
 **✅ Step 13: Install crispy-forms** (for nice form styles)
-bash
+- bash
 ```
 pip install django-crispy-forms crispy-bootstrap5
 ```
 Then update settings.py:
 
-python
+- python
 ```
 INSTALLED_APPS += ['crispy_forms', 'crispy_bootstrap5']
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
@@ -368,7 +370,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 **✅ Step 14: Course Model**
 In courses/models.py:
 
-python
+- python
 ```
 from django.db import models
 from users.models import User
@@ -384,7 +386,7 @@ class Course(models.Model):
 **✅ Step 15: Admin Setup**
 In courses/admin.py:
 
-python
+- python
 ```
 from django.contrib import admin
 from .models import Course
@@ -394,7 +396,7 @@ admin.site.register(Course)
 **✅ Step 16: Course Form**
 In courses/forms.py:
 
-python
+- python
 ```
 from django import forms
 from .models import Course
@@ -407,7 +409,7 @@ class CourseForm(forms.ModelForm):
 **✅ Step 17: Views to Add and List Courses**
 In courses/views.py:
 
-python
+- python
 ```
 from django.shortcuts import render, redirect
 from .forms import CourseForm
@@ -435,9 +437,9 @@ def course_list(request):
     return render(request, 'courses/course_list.html', {'courses': courses})
 ```
 **✅ Step 18: Templates**
-templates/courses/add_course.html:
+1.templates/courses/add_course.html:
 
-html
+- html
 ```
 {% extends "base.html" %}
 {% block content %}
@@ -448,11 +450,11 @@ html
   <button type="submit">Add</button>
 </form>
 {% endblock %}
-templates/courses/course_list.html:
+```
+2.templates/courses/course_list.html:
 
-html
-Copy
-Edit
+- html
+```
 {% extends "base.html" %}
 {% block content %}
 <h2>Courses</h2>
@@ -466,7 +468,7 @@ Edit
 **✅ Step 19: Add URLs**
 courses/urls.py:
 
-python
+- python
 ```
 from django.urls import path
 from . import views
@@ -479,18 +481,18 @@ urlpatterns = [
 ```
 And in config/urls.py:
 
-python
+- python
 ```
 path('courses/', include('courses.urls')),
 ```
 **✅ Step 20: Create Models**
 In quizzes/models.py, define two models:
 
-Question – a question that belongs to a course
+- Question – a question that belongs to a course
 
-Choice – the answer options for the question
+- Choice – the answer options for the question
 
-python
+- python
 ```
 from django.db import models
 from courses.models import Course
@@ -513,7 +515,7 @@ class Choice(models.Model):
 **✅ Step 21: Register in Admin**
 In quizzes/admin.py:
 
-python
+- python
 ```
 from django.contrib import admin
 from .models import Question, Choice
@@ -524,7 +526,7 @@ admin.site.register(Choice)
 
 Now run:
 
-bash
+- bash
 ```
 python manage.py makemigrations
 python manage.py migrate
@@ -532,7 +534,7 @@ python manage.py migrate
 **✅ Step 22: Add Quiz Forms**
 In quizzes/forms.py:
 
-python
+- python
 ```
 from django import forms
 from .models import Question, Choice
@@ -551,7 +553,7 @@ class ChoiceForm(forms.ModelForm):
 **✅ Step 23: Create Views**
 In quizzes/views.py:
 
-python
+- python
 ```
 from django.shortcuts import render, redirect
 from .models import Question, Choice
@@ -605,7 +607,7 @@ def take_quiz(request, course_id):
 **✅ Step 24: Create URLs**
 In quizzes/urls.py:
 
-python
+- python
 ```
 from django.urls import path
 from . import views
@@ -617,7 +619,7 @@ urlpatterns = [
 ]
 And in config/urls.py:
 ```
-python
+- python
 ```
 path('quizzes/', include('quizzes.urls')),
 ```
@@ -626,7 +628,7 @@ path('quizzes/', include('quizzes.urls')),
 
 **1.add_question.html**
 
-html
+- html
 ```
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
@@ -646,7 +648,7 @@ html
 
 **2.add_choice.html**
 
-html
+- html
 ```
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
@@ -664,7 +666,7 @@ html
 
 **3.take_quiz.html**
 
-html
+- html
 ```
 {% extends "base.html" %}
 {% block content %}
@@ -687,7 +689,7 @@ html
 
 **4.quiz_result.html**
 
-html
+- html
 ```
 {% extends "base.html" %}
 {% block content %}
