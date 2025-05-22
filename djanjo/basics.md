@@ -1,69 +1,21 @@
- **Project Idea :Online Learning Portal**
-A simple E-learning platform for students with Admin, Teacher, and Student roles. This app will have multiple functionalities split across different Django apps.
+**Project Idea :Online Learning Portal**
+ 
+A simple E-learning platform for students with Admin, Teacher, and Student roles using python. This app will have multiple functionalities split across different Django apps.
 
-What Is Django?
+🧠 **What Is Django?**
+
 Django is a tool (framework) that helps you build websites and web applications using the Python programming language.
 
 Think of Django like Lego blocks — it gives you pieces that you can combine to make websites faster and more securely
 
-**🗂️Apps Breakdown:**
 
-app_A → users:
+🧠**What is git bash**
 
-Handles user registration, login, roles (Student/Teacher/Admin).
-User profile page.
+It's is an application for Microsoft Windows environments which provides an emulation layer for a Git command line experience
 
-app_B → courses:
+Bash is an acronym for Bourne Again Shell. A shell is a terminal application used to interface with an operating system through written commands.
 
-Teachers can create and manage courses.
-Students can view course lists, enroll, and access course content.
-
-app_C → quizzes:
-
-Teachers can create quizzes for each course.
-Students can take quizzes and view scores.
-
-**📁 Other Folders in the Structure
-config:**
-
-Contains your Django settings, URL routing, and WSGI/ASGI configs.
-
-static:
-
-CSS, JavaScript, and image files (site styling, logos, etc.).
-
-templates:
-
-Common base HTML templates, course pages, quiz forms, login/signup.
-
-manage.py:
-
-Django's main CLI tool to run server, migrations, etc.
-
-db.sqlite3:
-
-Default development database.
-
-requirements.txt:
-
-List of all dependencies like
-
-
-**Key Features**
-
-User Roles: Admin, Teacher, Student
-
-Course Listing: Add/view courses with description and PDFs/videos
-
-Enroll System: Students can enroll in courses
-
-Quiz Module: Each course has related quizzes
-
-Result System: View quiz scores instantly
-
-Responsive UI using Bootstrap in static folder
-
-**Project Overview:**
+🚀**Project Overview:**
 
 A beginner-friendly Django-based online learning portal with:
 
@@ -75,12 +27,76 @@ Quiz module
 
 Modular architecture using multiple Django apps
 
+🛠**Key Features**
+
+1.User Roles: Admin, Teacher, Student
+
+2.Course Listing: Add/view courses with description and PDFs/videos
+
+3.Enroll System: Students can enroll in courses
+
+4.Quiz Module: Each course has related quizzes
+
+5.Result System: View quiz scores instantly
+
+6.Responsive UI using Bootstrap in static folder
+
+**🗂️Apps Breakdown:**
+
+**1.app_A → users:**
+
+Handles user registration, login, roles (Student/Teacher/Admin).
+User profile page.
+
+**2.app_B → courses:**
+
+Teachers can create and manage courses.
+Students can view course lists, enroll, and access course content.
+
+**3.app_C → quizzes:**
+
+Teachers can create quizzes for each course.
+Students can take quizzes and view scores.
+
+![image](https://github.com/user-attachments/assets/249ee7c1-a003-4008-a894-468b0d342949)
+
+
+
+**📁 Other Folders in the Structure
+
+**0.config:**
+
+Contains your Django settings, URL routing, and WSGI/ASGI configs.
+
+**1.static:**
+
+CSS, JavaScript, and image files (site styling, logos, etc.).
+
+**2.templates:**
+
+Common base HTML templates, course pages, quiz forms, login/signup.
+
+**3.manage.py:**
+
+Django's main CLI tool to run server, migrations, etc.
+
+**4.db.sqlite3:**
+
+Default development database.
+
+**5.requirements.txt:**
+
+List of all dependencies like
+
+
 ![image](https://github.com/user-attachments/assets/c428e297-8a70-467a-8f17-115efa4950a2)
 
 
 **HERE IS AN STEP-BY-STEP PROCEDURE FOR THE PROJECT:**
 
-✅0. Install Python and Django
+
+**✅0. Install Python and Django**
+
 Before you start, make sure Python is installed on your computer.
 
 Check Python:
@@ -96,31 +112,39 @@ If the python isn't available in the terminal then,
 
 go check path, here are the steps to do,
 
-step1; Go to Start and enter advanced system settings in the search bar.
+**step1;** Go to Start and enter advanced system settings in the search bar.
 
-steo2;Click View advanced system settings.
+**step2;** Click View advanced system settings.
 
-step3;In the System Properties dialog, click the Advanced tab and then click Environment Variables.
+**step3;** In the System Properties dialog, click the Advanced tab and then click Environment Variables.
 
-Depending on your installation:
+**Depending on your installation:**
+**case1:**
 
 If you selected Install for all users during installation, select Path from the list of System Variables and click Edit.
+
+**case2:**
+
+
 If you didn’t select Install for all users during installation, select Path from the list of User Variables and click Edit.
 Click New and enter the Python directory path, then click OK until all the dialogs are closed.
 
-Step 4 — Verify the Python Installation
+**Step 4 ;** Verify the Python Installation
+
+
 You can verify whether the Python installation is successful either through the command line or through the Integrated Development Environment (IDLE) application, if you chose to install it.
 
 Go to Start and enter cmd in the search bar. Click Command Prompt.
 
-Enter the following command in the command prompt:
+**Enter the following command in the command prompt:**
+
 ```
-In bash
+In bash or terminal in vscode
 python --version
 ```
 for more referance on how to install python refer this web, https://www.digitalocean.com/community/tutorials/install-python-windows-10
 
-✅1.Install django and create a folder
+**✅1.Install django and create a folder**
 
 First, create a project folder,
 ```
@@ -154,7 +178,9 @@ In bash
 pip install django
 ```
 
-✅ 2. Start Your Django Project
+**✅ 2. Start Your Django Project**
+
+
 Create the base project (called config):
 
 In bash
@@ -170,7 +196,7 @@ manage.py – the main controller for your app
 
 config/ – where settings are stored
 
-✅ 3. Start Django Apps
+**✅ 3. Start Django Apps**
 Apps are like “modules” or “sections” of your website.
 
 For Jeevi Academy, create three apps:
@@ -181,7 +207,7 @@ python manage.py startapp users     # For login/register
 python manage.py startapp courses   # For course content
 python manage.py startapp quizzes   # For quizzes
 ```
-✅ 4. Tell Django to Use Your Apps
+**✅ 4. Tell Django to Use Your Apps**
 In config/settings.py, find the INSTALLED_APPS section and add your apps:
 
 In python
@@ -198,7 +224,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 ```
-✅ 5. Run the Server
+**✅ 5. Run the Server**
 This will start your web app locally:
 
 In bash
@@ -207,7 +233,7 @@ python manage.py runserver
 ```
 Now visit http://127.0.0.1:8000 in your browser — you’ll see Django’s welcome page 🎉
 
-✅ Step 6: Use a Custom User Model
+**✅ Step 6: Use a Custom User Model**
 Django has a built-in user system, but we’ll customize it to add a “role.”
 
 🔧 In users/models.py, paste this code:
@@ -233,14 +259,14 @@ Replaces the default user model.
 
 Adds a role field (Student or Teacher).
 
-✅ Step 7: Tell Django to Use This Model
+**✅ Step 7: Tell Django to Use This Model**
 In config/settings.py, add:
 
 python
 ```
 AUTH_USER_MODEL = 'users.User'
 ```
-✅ Step 8: Create a Register Form
+**✅ Step 8: Create a Register Form**
 📁 Create a file: users/forms.py
 Add this:
 
@@ -255,7 +281,8 @@ class CustomUserCreationForm(UserCreationForm):
         model = User
         fields = ['username', 'email', 'role', 'password1', 'password2']
 ```
-✅ Step 9: Create the Register View
+**✅ Step 9: Create the Register View**
+
 In users/views.py, add:
 
 python
@@ -275,7 +302,7 @@ def register(request):
         form = CustomUserCreationForm()
     return render(request, 'users/register.html', {'form': form})
 ```
-✅ Step 10: Add URLs
+**✅ Step 10: Add URLs**
 📁 Create a file: users/urls.py
 
 python
@@ -297,7 +324,7 @@ urlpatterns = [
     path('users/', include('users.urls')),
 ]
 ```
-✅ Step 11: Create the HTML Template
+**✅ Step 11: Create the HTML Template**
 📁 Create: templates/users/register.html
 
 html
@@ -314,7 +341,7 @@ html
   </form>
 {% endblock %}
 ```
-✅ Step 12: Make Migrations
+**✅ Step 12: Make Migrations**
 In the terminal, run:
 
 bash
@@ -322,7 +349,7 @@ bash
 python manage.py makemigrations
 python manage.py migrate
 ```
-✅ Step 13: Install crispy-forms (for nice form styles)
+**✅ Step 13: Install crispy-forms** (for nice form styles)
 bash
 ```
 pip install django-crispy-forms crispy-bootstrap5
@@ -335,7 +362,7 @@ INSTALLED_APPS += ['crispy_forms', 'crispy_bootstrap5']
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 ```
-✅ Step 14: Course Model
+**✅ Step 14: Course Model**
 In courses/models.py:
 
 python
@@ -351,7 +378,7 @@ class Course(models.Model):
     def __str__(self):
         return self.title
 ```
-✅ Step 15: Admin Setup
+**✅ Step 15: Admin Setup**
 In courses/admin.py:
 
 python
@@ -361,7 +388,7 @@ from .models import Course
 
 admin.site.register(Course)
 ```
-✅ Step 16: Course Form
+**✅ Step 16: Course Form**
 In courses/forms.py:
 
 python
@@ -374,7 +401,7 @@ class CourseForm(forms.ModelForm):
         model = Course
         fields = ['title', 'description']
 ```
-✅ Step 17: Views to Add and List Courses
+**✅ Step 17: Views to Add and List Courses**
 In courses/views.py:
 
 python
@@ -404,7 +431,7 @@ def course_list(request):
     courses = Course.objects.all()
     return render(request, 'courses/course_list.html', {'courses': courses})
 ```
-✅ Step 18: Templates
+**✅ Step 18: Templates**
 templates/courses/add_course.html:
 
 html
@@ -433,7 +460,7 @@ Edit
 </ul>
 {% endblock %}
 ```
-✅ Step 19: Add URLs
+**✅ Step 19: Add URLs**
 courses/urls.py:
 
 python
@@ -453,7 +480,7 @@ python
 ```
 path('courses/', include('courses.urls')),
 ```
-✅ Step 20: Create Models
+**✅ Step 20: Create Models**
 In quizzes/models.py, define two models:
 
 Question – a question that belongs to a course
@@ -480,7 +507,7 @@ class Choice(models.Model):
     def __str__(self):
         return self.text
 ```
-✅ Step 21: Register in Admin
+**✅ Step 21: Register in Admin**
 In quizzes/admin.py:
 
 python
@@ -499,7 +526,7 @@ bash
 python manage.py makemigrations
 python manage.py migrate
 ```
-✅ Step 22: Add Quiz Forms
+**✅ Step 22: Add Quiz Forms**
 In quizzes/forms.py:
 
 python
@@ -518,7 +545,7 @@ class ChoiceForm(forms.ModelForm):
         fields = ['question', 'text', 'is_correct']
 ```
 
-✅ Step 23: Create Views
+**✅ Step 23: Create Views**
 In quizzes/views.py:
 
 python
@@ -572,7 +599,7 @@ def take_quiz(request, course_id):
     })
 ```
 
-✅ Step 24: Create URLs
+**✅ Step 24: Create URLs**
 In quizzes/urls.py:
 
 python
@@ -592,9 +619,10 @@ python
 path('quizzes/', include('quizzes.urls')),
 ```
 
-✅ Step 25: Templates
+**✅ Step 25: Templates**
 
-add_question.html
+**1.add_question.html**
+
 html
 ```
 {% extends "base.html" %}
@@ -613,7 +641,8 @@ html
 
 
 
-add_choice.html
+**2.add_choice.html**
+
 html
 ```
 {% extends "base.html" %}
@@ -630,7 +659,8 @@ html
 
 
 
-take_quiz.html
+**3.take_quiz.html**
+
 html
 ```
 {% extends "base.html" %}
@@ -652,8 +682,8 @@ html
 {% endblock %}
 ```
 
+**4.quiz_result.html**
 
-quiz_result.html
 html
 ```
 {% extends "base.html" %}
