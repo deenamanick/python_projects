@@ -1,31 +1,33 @@
 **Project Idea :Online Learning Portal**
  
-A simple E-learning platform for students with Admin, Teacher, and Student roles using python. This app will have multiple functionalities split across different Django apps.
+- A simple E-learning platform for students with Admin, Teacher, and Student roles using python.
+
+- This app will have multiple functionalities split across different Django apps.
 
 🧠 **What Is Django?**
 
-Django is a tool (framework) that helps you build websites and web applications using the Python programming language.
+- Django is a tool (framework) that helps you build websites and web applications using the Python programming language.
 
-Think of Django like Lego blocks — it gives you pieces that you can combine to make websites faster and more securely
+- Think of Django like Lego blocks — it gives you pieces that you can combine to make websites faster and more securely
 
 
 🧠**What is git bash**
 
-It's is an application for Microsoft Windows environments which provides an emulation layer for a Git command line experience
+- It's is an application for Microsoft Windows environments which provides an emulation layer for a Git command line experience
 
-Bash is an acronym for Bourne Again Shell. A shell is a terminal application used to interface with an operating system through written commands.
+- Bash is an acronym for Bourne Again Shell. A shell is a terminal application used to interface with an operating system through written commands.
 
 🚀**Project Overview:**
 
-A beginner-friendly Django-based online learning portal with:
+- A beginner-friendly Django-based online learning portal with:
 
-User roles (Admin, Teacher, Student)
+- User roles (Admin, Teacher, Student)
 
-Course management
+- Course management
 
-Quiz module
+- Quiz module
 
-Modular architecture using multiple Django apps
+- Modular architecture using multiple Django apps
 
 🛠**Key Features**
 
@@ -45,18 +47,18 @@ Modular architecture using multiple Django apps
 
 **1.app_A → users:**
 
-Handles user registration, login, roles (Student/Teacher/Admin).
-User profile page.
+- Handles user registration, login, roles (Student/Teacher/Admin).
+- User profile page.
 
 **2.app_B → courses:**
 
-Teachers can create and manage courses.
-Students can view course lists, enroll, and access course content.
+- Teachers can create and manage courses.
+- Students can view course lists, enroll, and access course content.
 
 **3.app_C → quizzes:**
 
-Teachers can create quizzes for each course.
-Students can take quizzes and view scores.
+- Teachers can create quizzes for each course.
+- Students can take quizzes and view scores.
 
 ![image](https://github.com/user-attachments/assets/249ee7c1-a003-4008-a894-468b0d342949)
 
@@ -97,20 +99,21 @@ List of all dependencies like
 
 **✅0. Install Python and Django**
 
-Before you start, make sure Python is installed on your computer.
+- Before you start, make sure Python is installed on your computer.
 
-Check Python:
+- Check Python:
 Open your terminal or command prompt and type:
 ```
 In bash
 python --version
 ```
-If Python is installed, it will show a version like Python 3.10.x.
-If not,https://www.python.org/downloads/windows/
+- If Python is installed, it will show a version like Python 3.10.x.
 
-If the python isn't available in the terminal then, 
+- If not,https://www.python.org/downloads/windows/
 
-go check path, here are the steps to do,
+- If the python isn't available in the terminal then, 
+
+- go check path, here are the steps to do,
 
 **step1;** Go to Start and enter advanced system settings in the search bar.
 
@@ -121,20 +124,20 @@ go check path, here are the steps to do,
 **Depending on your installation:**
 **case1:**
 
-If you selected Install for all users during installation, select Path from the list of System Variables and click Edit.
+- If you selected Install for all users during installation, select Path from the list of System Variables and click Edit.
 
 **case2:**
 
 
-If you didn’t select Install for all users during installation, select Path from the list of User Variables and click Edit.
+- If you didn’t select Install for all users during installation, select Path from the list of User Variables and click Edit.
 Click New and enter the Python directory path, then click OK until all the dialogs are closed.
 
 **Step 4 ;** Verify the Python Installation
 
 
-You can verify whether the Python installation is successful either through the command line or through the Integrated Development Environment (IDLE) application, if you chose to install it.
+- You can verify whether the Python installation is successful either through the command line or through the Integrated Development Environment (IDLE) application, if you chose to install it.
 
-Go to Start and enter cmd in the search bar. Click Command Prompt.
+- Go to Start and enter cmd in the search bar. Click Command Prompt.
 
 **Enter the following command in the command prompt:**
 
