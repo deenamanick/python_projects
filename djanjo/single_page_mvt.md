@@ -1,4 +1,4 @@
-🔐 Django Single Page Login App
+**🔐 Django Single Page Login App**
 
 - A minimalist Django web application that loads a single login page at the root URL (`/`).
 
@@ -7,14 +7,15 @@
 - Perfect for beginners learning Django’s **MVT (Model-View-Template)** architecture or for setting up a base login UI to extend with authentication.
 
 
-🚀Features
+**🚀Features**
+
 - Django 5+ compatible  
 - Simple and clean login form  
 - Easy project structure  
 - Great starting point for adding authentication  
 
 
-📦 Tech Stack  
+**📦 Tech Stack**
 - Python 3.10+  
 - Django 5.x  
 - HTML5, CSS (customizable)
@@ -23,64 +24,65 @@
 
 Here is a step by step process:
 
-🧰 Setup Instructions
+**🧰 Setup Instructions**
 
-🔹 1. Clone the Repository
-bash
+**🔹 1. Clone the Repository**
+- bash
 ```
 git clone https://github.com/your-username/django-login-page.git
 cd django-login-page
 ```
 
-🔹 2. Create and Activate Virtual Environment
-✅ Windows
-bash
+**🔹 2. Create and Activate Virtual Environment**
+**✅ Windows**
+- bash
 ```
 python -m venv venv
 venv\Scripts\activate
 ```
 
-✅ macOS/Linux
-bash
+**✅ macOS/Linux**
+- bash
 ```
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-🔹 3. Install Dependencies
-bash
+**🔹 3. Install Dependencies**
+- bash
 ```
 pip install django
 If you have a requirements.txt file:
 ```
-bash
+- bash
 ```
 pip install -r requirements.txt
 ```
 
-🔹 4. Create Django Project and App
+**🔹 4. Create Django Project and App**
 If you're starting from scratch:
 
-bash
+- bash
 ```
 django-admin startproject login_project .
 python manage.py startapp login_app
 ```
 
-🔹 5. Configure settings.py
-Add 'login_app' to INSTALLED_APPS
+**🔹 5. Configure settings.py**
 
-Configure TEMPLATES['DIRS']:
+- Add 'login_app' to INSTALLED_APPS
+- Add import os
 
-python
+- python
 ```
 'DIRS': [os.path.join(BASE_DIR, 'login_app', 'templates')],
 ```
 
-🔹 6. Set Up URLs
-login_project/urls.py
+**🔹 6. Set Up URLs**
 
-python
+- login_project/urls.py
+
+- python
 ```
 from django.contrib import admin
 from django.urls import path, include  # ✅ include is important
@@ -89,10 +91,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('login_app.urls')),  # root URL to login_app
 ]
-login_app/urls.py
-```
 
-python
+```
+- login_app/urls.py
+- python
 ```
 from django.urls import path
 from . import views
@@ -102,10 +104,10 @@ urlpatterns = [
 ]
 ```
 
-🔹 7. Create the View
-login_app/views.py
+**🔹 7. Create the View**
+- login_app/views.py
 
-python
+- python
 ```
 from django.shortcuts import render
 
@@ -113,10 +115,10 @@ def login_view(request):
     return render(request, 'login.html')
 ```
 
-🔹 8. Create the Template
-login_app/templates/login.html
+**🔹 8. Create the Template**
+- login_app/templates/login.html
 
-html
+- html
 ```
 <!DOCTYPE html>
 <html>
@@ -139,34 +141,34 @@ html
 </html>
 ```
 
-🔹 9. Run Migrations
-bash
+**🔹 9. Run Migrations**
+- bash
 ```
 python manage.py makemigrations
 python manage.py migrate
 ```
 
 🔹 10. Run the Server
-bash
+- bash
 ```
 python manage.py runserver
 ```
 
 
-Visit:
+**Visit:**
 👉 http://127.0.0.1:8000/
 
 You should see your login page!
 
 
-📌 Notes
+**📌 Notes**
 - No login logic (like authentication) is implemented — just a static form.
 
 - Extend it by integrating Django's built-in User model and authentication views.
 
 
-Author
+**Author
 IvanMaxwell
-GitHub
+GitHub**
 
 
