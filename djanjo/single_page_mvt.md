@@ -1,4 +1,4 @@
-**🔐 Django Single Page Login App**
+# Django Single Page Login App**
 
 - A minimalist Django web application that loads a single login page at the root URL (`/`).
 
@@ -52,11 +52,7 @@ source venv/bin/activate
 - bash
 ```
 pip install django
-If you have a requirements.txt file:
-```
-- bash
-```
-pip install -r requirements.txt
+
 ```
 
 **🔹 4. Create Django Project and App**
