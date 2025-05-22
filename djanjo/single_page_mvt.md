@@ -29,8 +29,8 @@ Here is a step by step process:
 **🔹 1. Clone the Repository**
 - bash
 ```
-git clone https://github.com/your-username/django-login-page.git
-cd django-login-page
+git clone https://github.com/deenamanick/python_projects.git
+cd python_projects.git
 ```
 
 **🔹 2. Create and Activate Virtual Environment**
