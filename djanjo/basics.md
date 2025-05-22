@@ -1,4 +1,4 @@
-**Project Idea :Online Learning Portal**
+**Project Idea :Online Learning Portal** --- In Progress Currenlty on hold
  
 - A simple E-learning platform for students with Admin, Teacher, and Student roles using python.
 
